@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+</head>
+<body>
+    <h1>print Non-Primes from 2 to a given limit</h1>
+</body>
+<script>
+    function printNonPrimes(solve) {
+    for (let i = 2; i <= solve; i++) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (!isPrime) {
+            console.log(i);
+        }
+    }
+}
+const solve = 20;
+printNonPrimes(solve);
+
+</script>
+</html>
